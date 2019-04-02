@@ -49,6 +49,8 @@ def traf(age,balance):
         fare=1050
     elif age>=19:
         fare=1250
+    else:
+        fare=0
     return balance-fare
 
 age=int(input("당신의 나이는? "))
@@ -66,3 +68,13 @@ def not_three(start, stop):
             print(i,end=' ')
 
 not_three(start,stop)
+
+#추가문제
+def count7(start,end):
+    cnt=0
+    for i in range(start,end+1):
+        for j in range(0,len(str(i))):
+            if str(i)[j]=='7':
+                cnt=cnt+1
+    return cnt
+print(count7(1,10000))

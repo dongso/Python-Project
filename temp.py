@@ -1,12 +1,8 @@
-#문제7
-print("문제 7번 ******************")
-start,stop=map(int,input().split())
-
-def not_three(start, stop):
-    for i in range(start,stop+1):
-        if str(i)[len(str(i))-1]=='3':
-            continue
-        else:
-            print(i,end=' ')
-
-not_three(start,stop)
+def count7(start,end):
+    cnt=0
+    for i in range(start,end+1):
+        for j in range(0,len(str(i))):
+            if str(i)[j]=='7':
+                cnt=cnt+1
+    return cnt
+print(count7(1,10000))
