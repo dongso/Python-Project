@@ -4,12 +4,14 @@ for i in range(1,6):
     for j in range(0,i):
         print(" ",end='')
     print("*\n")
+
 #문제 2
 print("문제 2번 ******************")
 for i in range(2,10) :
     print("%i단 시작 -->"%i)
     for j in range(1,10):
         print("%s * %s = %d"%(i,j,i*j))
+
 #문제 3
 print("문제 3번 ******************")
 def is_odd(num):
@@ -35,6 +37,7 @@ print("문제 5번 ******************")
 numbers=[1,2,3,4,5]
 result=[n*2 for n in numbers if n%2 == 0]
 print(result)
+
 #문제6
 print("문제 6번 ******************")
 
