@@ -156,7 +156,7 @@ for k,v in x.items(): #(key, value) 형태로 가져오기때문에 k,v
 #딕셔너리의 key들만 출력 (a b c d...)
 for k in x.keys():
     print(k,end=' ')
-print()
+
 
 
 
