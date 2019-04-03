@@ -16,10 +16,12 @@ for i in range(2,10) :
 print("문제 3번 ******************")
 def is_odd(num):
     res=""
-    if num%2==0: res="짝수입니다."
+    if num % 2 == 0: res="짝수입니다."
     else: res="홀수입니다."
     return res
-print(is_odd(1))
+print(is_odd(int(input("숫자를 입력해주세요: "))))
+
+#totalListCnt //변수명 작성 규칙.. -> 합성어의 두번째 시작단어는 대문자로!!
 
 #문제4
 print("문제 4번 ******************")
@@ -35,7 +37,7 @@ print(sum/cnt)
 #문제5
 print("문제 5번 ******************")
 numbers=[1,2,3,4,5]
-result=[n*2 for n in numbers if n%2 == 0]
+result=[n*2 for n in numbers if n%2 == 1]
 print(result)
 
 #문제6
@@ -58,15 +60,14 @@ print(traf(age,9000))
 
 #문제7
 print("문제 7번 ******************")
-start,stop=map(int,input().split())
 
 def not_three(start, stop):
     for i in range(start,stop+1):
-        if str(i)[len(str(i))-1]=='3':
+        if str(i)[len(str(i))-1]=='3':  #str(i)[-1]==> 마지막글자
             continue
-        else:
-            print(i,end=' ')
+        print(i,end=' ')
 
+start,stop=map(int,input().split())
 not_three(start,stop)
 
 #추가문제
@@ -77,4 +78,8 @@ def count7(start,end):
             if str(i)[j]=='7':
                 cnt=cnt+1
     return cnt
+
+    # for i in range(1,10000) :
+    #     cnt+=str(i).count('7')
+
 print(count7(1,10000))
