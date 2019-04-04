@@ -4,9 +4,9 @@ with open('d:/file/words.txt','r') as f:
     while True:
         line=f.readline()
         if not line: break #line에 저장된 것이 없으면.
-        line=line[0:-1]
+        line=line[0:-1] #\n제거
         tf=True
-        for i in range(0,len(line)) :
+        for i in range(0,int(len(line)/2)) : #반까지만 돌리면 됨.
             if line[i] != line[(-1)-i] :
                 tf=False
                 break
@@ -41,13 +41,13 @@ def find3N5():
             num.append(i)
         elif i%5==0:
             num.append(i)
-
     sum=0
     for i in range(0,len(num)-1):
         if num[i] != num[i+1]:
             sum+=num[i]
     if num[-1] != num[-2]: sum+=num[-1] #마지막 경우 확인
     return sum
+
 print(find3N5())
 #문제4
 a=[1,2,3,4]
@@ -75,12 +75,9 @@ with open('abc.txt','r') as f:
         contents.append(line)
 
 with open("res.txt",'w') as f:
-
     for i in range(len(contents)-1,-1,-1):
         data=contents[i]
         f.write(data)
-
-
 
 #문제 7
 def replaceJava2Python():
@@ -120,7 +117,6 @@ def tileCopy():
     global tile
     tile=copytile
     return
-
 def reAlloc(i,j,dir):
     if dir=="right":
        for x in range(i,-1,-1):
@@ -156,16 +152,14 @@ def anyFUNG():
         #3개이상 연속 타일 -> reAlloc(i,j) 호출
     return
 
-
-
-for i in range(5):
+for i in range(5): #5x5 matrix생성(애니펑 초기 타일 입력받음)
     subtile = []
     for j in range(5):
         data=int(input())
         subtile.append(data)
     tile.append(subtile)
 
-copytile=tile
+copytile=tile #초기 타일 copy
 anyFUNG()
 print("게임결과")
 for i in range(5):
