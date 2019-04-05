@@ -135,13 +135,10 @@ print("mileage-> ",mileage," \nE coin->",ecoin)
 
 
 
+#http://www.bobaedream.co.kr/mycar/mycar_list.php?gubun=K&maker_no=49&group_no=5&page=1&order=S11&view_size=20
+#http://www.bobaedream.co.kr/mycar/mycar_list.php?gubun=K&maker_no=3&page=1&order=S11&view_size=20
 
-
-
-
-
-
-
+#listCont > div.wrap-thumb-list > ul > li > div > div.mode-cell.fuel > span
 
 
 
