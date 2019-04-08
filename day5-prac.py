@@ -138,14 +138,14 @@ def anyFUNG():
         con=True
         for i in range(0,5):
             for j in range(0,3):
-               if tile[i][j]==tile[i][j+1] and tile[i][j+1] == tile[i][j+2]:
+               if tile[i][j] != 0 and tile[i][j]==tile[i][j+1] and tile[i][j+1] == tile[i][j+2]:
                    reAlloc(i,j,"right")
                    con=False
                else: con=True
 
         for i in range(0,3):
             for j in range(0,5):
-                if tile[i][j] == tile[i + 1][j] and tile[i + 1][j] == tile[i + 2][j]:
+                if tile[i][j] != 0 and tile[i][j] == tile[i + 1][j] and tile[i + 1][j] == tile[i + 2][j]:
                     reAlloc(i, j, "down")
                     con=False
                 else: con=True
