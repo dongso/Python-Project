@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Practice/Day5-prac.py" line="217" />
+    <bookmark url="file://$PROJECT_DIR$/Practice/Day5-prac.py" line="208" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49bfaa75-8c00-4dcb-a179-bf77c20c62e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Day05-1(Connect SQL Server).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Practice/190517(종합문제).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Practice/Day5-prac.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice/Day5-prac.py" beforeDir="false" afterPath="$PROJECT_DIR$/Practice/Day5-prac.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="mysql-python" />
   </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.42501518">
@@ -23,10 +24,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Practice/Day5-prac.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="414">
-                  <caret line="332" lean-forward="true" selection-start-line="332" selection-end-line="332" />
+                <state relative-caret-position="380">
+                  <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
                   <folding>
-                    <element signature="e#0#14#0" expanded="true" />
+                    <element signature="e#13#27#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -35,11 +36,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Practice/190517(종합문제).py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4560">
-                  <caret line="228" selection-start-line="228" selection-end-line="228" />
-                  <folding>
-                    <element signature="e#0#14#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="4500">
+                  <caret line="229" selection-start-line="229" selection-end-line="229" />
                 </state>
               </provider>
             </entry>
@@ -60,11 +58,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Practice/190517(종합문제).py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="508">
-                  <caret line="318" lean-forward="true" selection-start-line="318" selection-end-line="318" />
-                  <folding>
-                    <element signature="e#0#14#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="833">
+                  <caret line="630" lean-forward="true" selection-start-line="630" selection-end-line="630" />
                 </state>
               </provider>
             </entry>
@@ -107,7 +102,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,6 +118,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,12 +227,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13224447" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.13224447" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5010846" side_tool="true" visible="true" weight="0.13224447" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -315,13 +310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/190515-2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Practice/190516-2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-946">
@@ -359,22 +347,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/190515-2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Practice/190517(종합문제).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4560">
-          <caret line="228" selection-start-line="228" selection-end-line="228" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="4500">
+          <caret line="229" selection-start-line="229" selection-end-line="229" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Practice/Day5-prac.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="332" lean-forward="true" selection-start-line="332" selection-end-line="332" />
+        <state relative-caret-position="380">
+          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#13#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
