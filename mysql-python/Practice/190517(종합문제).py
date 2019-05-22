@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import pymssql
 from tkinter import *
 from tkinter.filedialog import *
@@ -7,16 +7,16 @@ from tkinter import messagebox
 
 
 
-db = "khy"
-host = "192.168.111.130"
-user = "root"
-password = "1234"
+global db; db = "khy"
+global host; host = "192.168.111.130"
+global user; user = "root"
+global password; password = "1234"
 
 ## 1일차 내용
 ## p.52의 [그림 3-1]을 구축하라. DB이름은 자기이름의 영문약자.
 
-con = pymssql.connect(server=host, user=user, password=password, database=db)
-cur= con.cursor()
+global con; con = pymssql.connect(server=host, user=user, password=password, database=db)
+global cur; cur= con.cursor()
 
 #sql="create table user_info(id char(10) primary key , name char(20), addr varchar(100)) "
 #cur.execute(sql)
@@ -320,19 +320,6 @@ con.close()
 
 
 
-=======
-import pymssql
-from tkinter import *
-from tkinter.filedialog import *
-from collections import Iterable
-from tkinter import messagebox
-
-
-db = "khy"
-host = "192.168.111.130"
-user = "root"
-password = "1234"
-
 
 ## 1일차 내용
 ## p.52의 [그림 3-1]을 구축하라. DB이름은 자기이름의 영문약자.
@@ -627,8 +614,3 @@ con.close()
 
 
 
-
-
-
-
->>>>>>> 6908159b33f04a72d8e2df7922cdc07deadfa0cf
