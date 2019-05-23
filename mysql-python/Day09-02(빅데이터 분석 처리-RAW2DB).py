@@ -1,3 +1,4 @@
+import random
 from tkinter import *
 from tkinter.filedialog import *
 import os.path
@@ -10,6 +11,7 @@ import matplotlib.pyplot as plt
 import csv
 import xlrd
 import xlwt
+import xlsxwriter
 
 IP_ADDR = '192.168.111.141'
 DB_NAME = 'machinedb'
@@ -114,7 +116,46 @@ def saveFile() :
             saveFp.write( struct.pack('B',outImage[i][k]))
 
     saveFp.close()
+    return
 
+def saveExcelImage():
+    global window, canvas, paper, inW, inH, outW, outH, inImage, outImage
+    global window2, sheet, rows
+    saveFp = asksaveasfile(parent=window, mode='wb',
+                           defaultextension="*.xlsx", filetypes=(("엑셀 파일", "*.xlsx"), ("모든파일", "*.*")))
+
+    xlsxName=saveFp.name
+    sheetName=os.path.basename(xlsxName).split(".")[0]
+    wb=xlsxwriter.Workbook(xlsxName)
+    ws=wb.add_worksheet(sheetName)
+
+
+    #워크시트 폭 조절
+    ws.set_column(0, outW, 1.0) #실제로 0.34쯤
+
+    #워크시트 높이 조절
+    for r in range(outH):
+        ws.set_row(r,9.5) #실제로 0.35정도
+
+    #각 셀마다 색상을 지정하자.
+
+    for rowNum in range(outH):
+        for colNum in range(outW):
+            data=outImage[rowNum][colNum]
+            #data값으로 셀의 배경색을 조정한다
+            #16진수 RGB format (#FFFFFF)
+            if data>15:
+                hexStr="#"+str(hex(data))[2:]*3
+            else:
+                hexStr="#"+('0'+hex(data)[2:])*3
+
+            #셀의 포맷 형식을 준비
+            cell_format=wb.add_format()
+            cell_format.set_bg_color(hexStr)
+            ws.write(rowNum,colNum,'',cell_format)
+    wb.close()
+    messagebox.showinfo('완료', 'raw파일이 엑셀로 저장됨.')
+    return
 
 def loadDB() :
     global window, canvas, paper, inW, inH, outW, outH, inImage, outImage
@@ -268,15 +309,24 @@ def rawToDB():
     global csvList, sheet
     global window, canvas, paper, inW, inH, outW, outH, inImage, outImage
     global fname
+
+    if outImage==[] or outImage==None:
+        return
+
     con = pymysql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME, charset='utf8')
     cur = con.cursor()
 
+    if fname=='' or fname==None:
+        fname='image'+random.randint(10000)+".raw"
+
+
+    ftype=fname.split('.')[1]
 
     step=1
     for i in range(0, outH, step):
         for k in range(0, outW, step):
-            sql = "insert into rawtbl(fName, x, y, value) values('" + fname + "',"
-            sql+=str(i)+", "+str(k)+", "+str(outImage[i][k])+")"
+            sql = "insert into colorTBL(fname,ftype, x, y, r, g, b, xSize, ySize) values('" + fname + "','"+ftype+"',"
+            sql+=str(i)+", "+str(k)+", "+str(outImage[i][k])+","+str(outImage[i][k])+","+str(outImage[i][k])+","+str(outW)+","+str(outH)+")"
             cur.execute(sql)
             #print(sql)
 
@@ -284,43 +334,114 @@ def rawToDB():
     con.commit()
     con.close()
 
-def rawInDB():
-    global csvList, sheet
+# def rawInDB():
+#     global csvList, sheet
+#     global window, canvas, paper, inW, inH, outW, outH, inImage, outImage
+#     global fname
+#     con = pymysql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME, charset='utf8')
+#     cur = con.cursor()
+#
+#     inFileName=askstring("파일이름", "값 입력")
+#
+#     sql = "select x, y, r,xSize,ySize from colorTBL where fName='"+inFileName+"'"
+#     cur.execute(sql)
+#     rows = cur.fetchall()
+#     inH=rows[0][4]
+#     inW=rows[0][3]
+#
+#     # #비어있는 리스트 만들기
+#     cList = []
+#     for i in range(inH):
+#         tmpList=[]
+#         for k in range(inW):
+#             tmpList.append(0)
+#         cList.append(tmpList)
+#
+#     for row in rows:
+#         cList[int(row[0])][int(row[1])]=int(row[2])
+#
+#     inImage=cList
+#     equalImage()
+#     displayImage()
+#
+#     cur.close()
+#     con.commit()
+#     con.close()
+
+def rawInDB() :
     global window, canvas, paper, inW, inH, outW, outH, inImage, outImage
-    global fname
+    global window2, sheet, rows
     con = pymysql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME, charset='utf8')
     cur = con.cursor()
 
-    inFileName=askstring("파일이름", "값 입력")
+    sql = "SELECT distinct fname,ftype,xSize, ySize FROM colorTBL"  # ID로 추출하기
+    cur.execute(sql)
 
-    sql = "select x, y, value from rawtbl where fName='"+inFileName+"'"
+    rows = cur.fetchall()
+
+    ## 새로운 윈도창 띄우기
+    window2 = Toplevel(window)
+    sheet = ttk.Treeview(window2, height=10);    sheet.pack()
+    descs = cur.description
+    colNames = [d[0] for d in descs]
+    sheet.column("#0", width=80);
+    sheet.heading("#0", text=colNames[0])
+    sheet["columns"] = colNames[1:]
+    for colName in colNames[1:]:
+        sheet.column(colName, width=80);
+        sheet.heading(colName, text=colName)
+    for row in rows :
+        sheet.insert('', 'end', text=row[0], values=row[1:])
+    sheet.bind('<Double-1>', sheetDblClick2)
+
+    cur.close()
+    con.close()
+
+
+
+def sheetDblClick2(event) :
+    global window, canvas, paper, inW, inH, outW, outH, inImage, outImage
+    global window2, sheet, rows
+
+    item = sheet.identify('item', event.x, event.y) # 'I001' ....
+    entNum = int(item[1:]) - 1  ## 쿼리한 결과 리스트의 순번
+    inFileName = rows[entNum][0] ## 선택한 id
+    window2.destroy()
+
+    # DB에서 이미지를 다운로드
+    con = pymysql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME, charset='utf8')
+    cur = con.cursor()
+
+    sql = "select x, y, r,xSize,ySize from colorTBL where fName='" + inFileName + "'"
     cur.execute(sql)
     rows = cur.fetchall()
-    print(len(rows))
-    hei = int(math.sqrt(len(rows)))
-    inH=inW=hei
-    print(inH)
-    #비어있는 리스트 만들기
-    cList = []
+    print(rows)
+    inH=rows[entNum][4]
+    inW=rows[entNum][3]
+
+        # #비어있는 리스트 만들기
+    inImage = []
     for i in range(inH):
         tmpList=[]
         for k in range(inW):
             tmpList.append(0)
-        cList.append(tmpList)
+            inImage.append(tmpList)
 
     for row in rows:
-        cList[int(row[0])][int(row[1])]=int(row[2])
+        x,y,r,xSize,ySize=row
+        inImage[x][y]=r
 
-    inImage=cList
     equalImage()
     displayImage()
 
     cur.close()
-    con.commit()
+
     con.close()
 
 
-    pass
+
+
+
 ##################################################################################
 
 def equalImage() :
@@ -737,12 +858,20 @@ rawfileMenu.add_command(label="파일에서 열기", command=openImage)
 rawfileMenu.add_command(label="DB에서 불러오기", command=loadDB)
 rawfileMenu.add_command(label="CSV로 저장하기", command=raw2csv)
 rawfileMenu.add_command(label="CSV에서 읽어오기", command=csv2raw)
-rawfileMenu.add_command(label="테이블에 raw 저장하기", command=rawToDB)
-rawfileMenu.add_command(label="테이블에서 raw 불러오기", command=rawInDB)
+rawfileMenu.add_command(label="RAW->테이블", command=rawToDB)
+rawfileMenu.add_command(label="테이블->RAW", command=rawInDB)
 
 
 rawfileMenu.add_separator()
 rawfileMenu.add_command(label="저장", command=saveFile)
+rawfileMenu.add_separator()
+rawfileMenu.add_command(label="엑셀로저장", command=saveExcelImage)
+
+
+
+
+
+
 #rawfileMenu.add_command(label="DB에 저장하기", command=saveDB)
 
 rawImage1Menu = Menu(rawDataMenu)
@@ -780,6 +909,9 @@ ecDataMenu.add_cascade(label="EXCEL 분석", menu=excelfileMenu)
 excelfileMenu.add_command(label="excel파일 열기", command=openEXCELFile)
 excelfileMenu.add_command(label="excel파일 저장하기", command=saveEXCELFile)
 excelfileMenu.add_command(label="가격(cost) 10%인상시키기", command=excelup10)
+
+
+## -- 새로운 메뉴 탭 추가(컬러 이미지 처리)
 
 
 window.mainloop()
