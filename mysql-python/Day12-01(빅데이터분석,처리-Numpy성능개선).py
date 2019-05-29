@@ -727,26 +727,18 @@ def excelUp10() :
 from PIL import Image
 def loadImageColor(fname) :
     global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename, photo
-    inImageR, inImageG, inImageB = [], [], [] # 초기화
+
+
     # 파일 크기 계산
     photo = Image.open(fname)
     inW = photo.width;  inH = photo.height
-    # 빈 메모리 확보 (2차원 리스트)
-    for _ in range(inH) :
-        tmp = []
-        for _ in range(inW) :
-            tmp.append(0)
-        inImageR.append(tmp)
-    for _ in range(inH) :
-        tmp = []
-        for _ in range(inW) :
-            tmp.append(0)
-        inImageG.append(tmp)
-    for _ in range(inH) :
-        tmp = []
-        for _ in range(inW) :
-            tmp.append(0)
-        inImageB.append(tmp)
+
+    ### inImageR, G, B 초기화 to Numpy
+    inImageR = np.zeros((inH, inW), dtype=np.uint8)
+    inImageG = np.zeros((inH, inW), dtype=np.uint8)
+    inImageB = np.zeros((inH, inW), dtype=np.uint8)
+
+
     # 파일 --> 메모리로 한개씩 옮기기
     photoRGB = photo.convert('RGB')
     for  i  in  range(inH) :
@@ -870,9 +862,50 @@ def addImageColor() :
     ################################
     displayImageColor()
 
+def addBlueImageColor() :
+    global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename
+    outImageR, outImageG, outImageB = [], [], []  # 초기화
+    # outImage의 크기를 결정
+    outH = inH;  outW = inW
+    # 빈 메모리 확보 (2차원 리스트)
+    for _ in range(outH):
+        tmp = []
+        for _ in range(outW):
+            tmp.append(0)
+        outImageR.append(tmp)
+    for _ in range(outH):
+        tmp = []
+        for _ in range(outW):
+            tmp.append(0)
+        outImageG.append(tmp)
+    for _ in range(outH):
+        tmp = []
+        for _ in range(outW):
+            tmp.append(0)
+        outImageB.append(tmp)
+    value = askinteger("밝게할 값", "값 입력")
+    #### 영상 처리 알고리즘을 구현 ####
+    for i in range(inH) :
+        for k in range(inW) :
+            outImageR[i][k]=inImageR[i][k]
+            outImageG[i][k]=inImageG[i][k]
+
+            if inImageB[i][k] + value > 255 :
+                outImageB[i][k] = 255
+            else :
+                outImageB[i][k] = inImageB[i][k] + value
+
+
+    ################################
+    displayImageColor()
+import time
 def reverseImageColor() :
     global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename
     outImageR, outImageG, outImageB = [], [], []  # 초기화
+
+    startTime=time.time() #시작시간
+
+
     # outImage의 크기를 결정
     outH = inH;  outW = inW
     # 빈 메모리 확보 (2차원 리스트)
@@ -899,6 +932,39 @@ def reverseImageColor() :
             outImageB[i][k] = 255 - inImageB[i][k]
     ################################
     displayImageColor()
+
+    seconds=time.time()-startTime
+    status.configure(text=status.cget("text")+"\t\t걸린 시간(초) : "+"{0:.2f}".format(seconds))
+
+import numpy as np
+def reverseImageColorNumPy():
+    global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename
+
+    outH = inH; outW = inW
+
+    #초기화
+    outImageR = np.zeros((outH, outW), dtype=np.uint8)
+    outImageG = np.zeros((outH, outW), dtype=np.uint8)
+    outImageB = np.zeros((outH, outW), dtype=np.uint8)
+
+    startTime = time.time()  # 시작시간
+
+    ###List - > Numpy
+    # inImageR = np.asarray(inImageR, dtype=np.uint8)
+    # inImageG = np.asarray(inImageG, dtype=np.uint8)
+    # inImageB = np.asarray(inImageB, dtype=np.uint8)
+
+    #### 영상 처리 알고리즘을 구현 ####
+    outImageR = 255 - inImageR
+    outImageG = 255 - inImageG
+    outImageB = 255 - inImageB
+
+    #### 이미지 출력 ####
+    displayImageColor()
+
+    seconds = time.time() - startTime
+    status.configure(text=status.cget("text") + "\t\t걸린 시간(초) : " + "{0:.2f}".format(seconds))
+
 
 def mirror1ImageColor() :
     global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename
@@ -1097,6 +1163,28 @@ def embossingColor() :
     ################################
     displayImageColor()
 
+
+def waveHorColor() :
+    global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename, photo
+
+    ####### CV2 메소드로 구현하기 --> photo2로 넘기기 ####
+
+    for i in range(inH) :
+        for k in range(inW) :
+            oy = int(15.0 * math.sin(2*3.14*k / 180))
+            ox = 0
+            if i + oy < inH :
+                outImageR[i][k]=inImageR[(i+oy)%inH][k]
+                outImageG[i][k]=inImageG[(i+oy)%inH][k]
+                outImageB[i][k]=inImageB[(i+oy)%inH][k]
+
+            else :
+                outImageR[i][k] = 0
+                outImageG[i][k] = 0
+                outImageB[i][k] = 0
+
+    displayImageColor()
+
 ##############################################
 ########### OpenCV 활용 ##########
 ##############################################
@@ -1279,7 +1367,8 @@ def waveHorCV2() :
             oy = int(15.0 * math.sin(2*3.14*k / 180))
             ox = 0
             if i + oy < inH :
-                cvPhoto2[i,k]  = cvPhoto [(i+oy)% inH, k]
+                cvPhoto2[i,k]  = cvPhoto[(i+oy)%inH, k]
+                outImageR[i][k]=inImageR[(i+oy)%inH][k]
             else :
                 cvPhoto2[i,k] = 0
 
@@ -1366,7 +1455,7 @@ inImageR, inImageG, inImageB, outImageR, outImageG, outImageB = [],[],[],[],[],[
 photo, cvPhoto = None, None # Pillow용, OpenCV용
 
 ## 메인 코드부
-window = Tk(); window.title('빅데이터 분석/처리 통합 툴 (Ver 0.10)')
+window = Tk(); window.title('빅데이터 분석/처리 통합 툴 (Ver 0.12)')
 window.geometry('800x500')
 
 ## Status Bar 추가
@@ -1382,6 +1471,7 @@ mainMenu.add_cascade(label="RAW 데이터 분석", menu=rawDataMenu)
 
 rawfileMenu = Menu(rawDataMenu)
 rawDataMenu.add_cascade(label="파일", menu=rawfileMenu)
+
 rawfileMenu.add_command(label="파일에서 열기", command=openImage)
 rawfileMenu.add_command(label="DB에서 불러오기", command=loadDB)
 rawfileMenu.add_separator()
@@ -1445,6 +1535,13 @@ colorDataMenu.add_command(label="확대(백워딩)", command=zoomIn2ImageColor)
 colorDataMenu.add_command(label="히스토그램(MatPlotLib)", command=matHistoColor)
 colorDataMenu.add_separator()
 colorDataMenu.add_command(label="엠보싱", command=embossingColor)
+colorDataMenu.add_separator()
+colorDataMenu.add_command(label="반전하기-Numpy", command=reverseImageColorNumPy)
+colorDataMenu.add_command(label="wave", command=waveHorColor)
+colorDataMenu.add_command(label="blue", command=addBlueImageColor)
+
+
+
 
 #################################
 openCVMenu = Menu(mainMenu)

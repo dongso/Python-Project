@@ -755,7 +755,7 @@ def makeEmptyRGBList():
         B.append(tmp)
     return R,G,B
 
-def loadImageColor(fname) :
+def loadIeColor(fname) :
     global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename, photo
     inImageR, inImageG, inImageB = [], [], [] # 초기화
     # 파일 크기 계산
