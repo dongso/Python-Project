@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49bfaa75-8c00-4dcb-a179-bf77c20c62e6" name="Default Changelist" comment="Day 10~11">
-      <change afterPath="$PROJECT_DIR$/Day12-01(빅데이터분석,처리-Numpy성능개선).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyProject/DBConn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyProject/Search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyProject/printM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyProject/ver01-UI.py" afterDir="false" />
+    <list default="true" id="49bfaa75-8c00-4dcb-a179-bf77c20c62e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Day13(빅데이터분석,처리-딥러닝 기반 적용).py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day13-2(빅데이터분석,처리-딥러닝 기반 적용 동영상).py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyProject/ver02-fileOpen2Cv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day10-오전 퀴즈.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day10-오전 퀴즈.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day11.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day11.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyProject/.idea/MyProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MyProject/.idea/MyProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyProject/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyProject/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyProject/Search.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyProject/Search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyProject/ver01-UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyProject/ver01-UI.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,33 +22,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day12-01(빅데이터분석,처리-Numpy성능개선).py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29000">
-              <caret line="1453" column="82" selection-start-line="1453" selection-start-column="82" selection-end-line="1453" selection-end-column="82" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day03-06(GUI 1).py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day04-01(practice GUI).py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="400">
               <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -64,7 +36,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day06-02(MySQL 대용량 연동).py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1660">
+            <state relative-caret-position="1760">
               <caret line="88" column="64" selection-start-line="88" selection-start-column="64" selection-end-line="88" selection-end-column="64" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -73,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day10-오전 퀴즈.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="757" column="24" lean-forward="true" selection-start-line="757" selection-start-column="24" selection-end-line="757" selection-end-column="24" />
+            <state relative-caret-position="15440">
+              <caret line="772" column="70" selection-start-line="772" selection-start-column="70" selection-end-line="772" selection-end-column="70" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -86,9 +58,60 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deep_learning_object_detection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1220">
+              <caret line="63" column="24" selection-start-line="46" selection-end-line="73" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day13(빅데이터분석,처리-딥러닝 기반 적용).py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15380">
+              <caret line="772" column="39" selection-start-line="772" selection-start-column="39" selection-end-line="772" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/lunchApp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day13-2(빅데이터분석,처리-딥러닝 기반 적용 동영상).py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="1516" column="10" selection-start-line="1516" selection-start-column="10" selection-end-line="1516" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Practice/190517(종합문제).py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="636">
+              <caret line="537" lean-forward="true" selection-start-line="537" selection-end-line="537" />
+              <folding>
+                <element signature="e#1#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day07-mission.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5900">
+            <state relative-caret-position="6000">
               <caret line="300" column="26" selection-start-line="300" selection-start-column="26" selection-end-line="300" selection-end-column="26" />
               <folding>
                 <element signature="e#297#329#0" expanded="true" />
@@ -129,6 +152,7 @@
       <find>Tk</find>
       <find>Image</find>
       <find>import</find>
+      <find>Tree</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,13 +199,16 @@
         <option value="$PROJECT_DIR$/MyProject/ver01-UI.py" />
         <option value="$PROJECT_DIR$/Day12-01(빅데이터분석,처리-Numpy성능개선).py" />
         <option value="$PROJECT_DIR$/Day10-오전 퀴즈.py" />
+        <option value="$PROJECT_DIR$/deep_learning_object_detection.py" />
+        <option value="$PROJECT_DIR$/Day13(빅데이터분석,처리-딥러닝 기반 적용).py" />
+        <option value="$PROJECT_DIR$/Day13-2(빅데이터분석,처리-딥러닝 기반 적용 동영상).py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="861" />
-    <option name="width" value="1066" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="73" />
+    <option name="width" value="1537" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -200,7 +227,7 @@
             <path>
               <item name="mysql-python" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysql-python" type="462c0819:PsiDirectoryNode" />
-              <item name="MyProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Practice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mysql-python" type="b2602c69:ProjectViewProjectNode" />
@@ -235,28 +262,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Day10-오전 퀴즈">
-    <configuration name="Day09-practice" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="mysql-python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Practice" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Practice/Day09-practice.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.lunchApp">
     <configuration name="Day10-오전 퀴즈" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mysql-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -278,27 +284,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Day11" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="mysql-python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day11.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Day12-01(빅데이터분석,처리-Numpy성능개선)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mysql-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -312,6 +297,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day12-01(빅데이터분석,처리-Numpy성능개선).py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Day13(빅데이터분석,처리-딥러닝 기반 적용)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="mysql-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day13(빅데이터분석,처리-딥러닝 기반 적용).py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lunchApp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="mysql-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/lunchApp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -343,11 +370,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.lunchApp" />
+        <item itemvalue="Python.Day13(빅데이터분석,처리-딥러닝 기반 적용)" />
         <item itemvalue="Python.Day10-오전 퀴즈" />
         <item itemvalue="Python.Day12-01(빅데이터분석,처리-Numpy성능개선)" />
         <item itemvalue="Python.ver01-UI" />
-        <item itemvalue="Python.Day11" />
-        <item itemvalue="Python.Day09-practice" />
       </list>
     </recent_temporary>
   </component>
@@ -407,26 +434,33 @@
       <option name="project" value="LOCAL" />
       <updated>1559001247676</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Day 10~11">
+      <created>1559089493180</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1559089493180</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="882" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" x="236" y="379" width="393" height="401" id="Project" order="0" sideWeight="0.449069" weight="0.30769232" />
-      <window_info id="Structure" order="1" sideWeight="0.550931" side_tool="true" weight="0.30769232" />
+      <window_info active="true" content_ui="combo" x="236" y="379" width="393" height="401" id="Project" order="0" sideWeight="0.44685465" visible="true" weight="0.20864068" />
+      <window_info id="Structure" order="1" sideWeight="0.55314535" side_tool="true" visible="true" weight="0.20864068" />
       <window_info id="Favorites" order="2" sideWeight="0.5021692" side_tool="true" weight="0.13224447" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.03253796" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" weight="0.30777657" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.33296824" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052685" side_tool="true" weight="0.30802602" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -442,40 +476,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Day 10~11" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Practice/190515.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="28" column="41" selection-start-line="20" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/190516-2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-946">
-          <caret line="72" column="15" lean-forward="true" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day05-1(Connect SQL Server).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/190516-Practice5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Practice/190516-Practice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -488,16 +488,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBcon.py" />
     <entry file="file://$PROJECT_DIR$/12.py" />
-    <entry file="file://$PROJECT_DIR$/Practice/190517(종합문제).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10880">
-          <caret line="548" column="48" selection-start-line="548" selection-start-column="48" selection-end-line="548" selection-end-column="48" />
-          <folding>
-            <element signature="e#1#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Practice/Day5-prac.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6560">
@@ -619,7 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/lunchApp.py" />
     <entry file="file://$PROJECT_DIR$/Day08-03(오전 미션).py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -791,16 +780,6 @@
     <entry file="file://$PROJECT_DIR$/MyProject/Test network printer connection.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day12-01(빅데이터분석,처리-Numpy성능개선).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29000">
-          <caret line="1453" column="82" selection-start-line="1453" selection-start-column="82" selection-end-line="1453" selection-end-column="82" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Day03-06(GUI 1).py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -811,9 +790,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/python/python37/Lib/site-packages/pymysql/connections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="629" selection-start-line="629" selection-end-line="629" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day12-01(빅데이터분석,처리-Numpy성능개선).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2440">
+          <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#3910#4834#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Day04-01(practice GUI).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="400">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -823,7 +820,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Day06-02(MySQL 대용량 연동).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1660">
+        <state relative-caret-position="1760">
           <caret line="88" column="64" selection-start-line="88" selection-start-column="64" selection-end-line="88" selection-end-column="64" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -831,9 +828,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Day10-오전 퀴즈.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15440">
+          <caret line="772" column="70" selection-start-line="772" selection-start-column="70" selection-end-line="772" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep_learning_object_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1220">
+          <caret line="63" column="24" selection-start-line="46" selection-end-line="73" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day13(빅데이터분석,처리-딥러닝 기반 적용).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15380">
+          <caret line="772" column="39" selection-start-line="772" selection-start-column="39" selection-end-line="772" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Day07-mission.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5900">
+        <state relative-caret-position="6000">
           <caret line="300" column="26" selection-start-line="300" selection-start-column="26" selection-end-line="300" selection-end-column="26" />
           <folding>
             <element signature="e#297#329#0" expanded="true" />
@@ -848,12 +869,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day10-오전 퀴즈.py">
+    <entry file="file://$USER_HOME$/Desktop/lunchApp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="757" column="24" lean-forward="true" selection-start-line="757" selection-start-column="24" selection-end-line="757" selection-end-column="24" />
+        <state relative-caret-position="80">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day13-2(빅데이터분석,처리-딥러닝 기반 적용 동영상).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="1516" column="10" selection-start-line="1516" selection-start-column="10" selection-end-line="1516" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/190517(종합문제).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="537" lean-forward="true" selection-start-line="537" selection-end-line="537" />
+          <folding>
+            <element signature="e#1#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

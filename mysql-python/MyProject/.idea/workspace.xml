@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e781ee12-8332-4f35-b3a2-000d1d42607d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Day12-01(빅데이터분석,처리-Numpy성능개선).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBConn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/printM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ver01-UI.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day13(빅데이터분석,처리-딥러닝 기반 적용).py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day13-2(빅데이터분석,처리-딥러닝 기반 적용 동영상).py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ver02-fileOpen2Cv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Day10-오전 퀴즈.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Day10-오전 퀴즈.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Day11.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Day11.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MyProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Search.py" beforeDir="false" afterPath="$PROJECT_DIR$/Search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ver01-UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/ver01-UI.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,19 +19,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBConn.py">
+        <entry file="file://$PROJECT_DIR$/../Day12-01(빅데이터분석,처리-Numpy성능개선).py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="8" selection-end-line="11" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ver01-UI.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="360" column="26" selection-start-line="360" selection-start-column="26" selection-end-line="360" selection-end-column="26" />
+            <state relative-caret-position="154">
+              <caret line="778" column="7" selection-start-line="778" selection-start-column="7" selection-end-line="778" selection-end-column="7" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -44,19 +31,74 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Search.py">
+        <entry file="file://$PROJECT_DIR$/ver01-UI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="48" column="23" lean-forward="true" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+            <state relative-caret-position="-1848">
+              <caret line="519" column="95" lean-forward="true" selection-start-line="519" selection-start-column="95" selection-end-line="519" selection-end-column="95" />
+              <folding>
+                <element signature="e#297#609#0" />
+                <element signature="e#682#1805#0" />
+                <element signature="e#1973#2374#0" />
+                <element signature="e#2493#3221#0" />
+                <element signature="e#3254#3660#0" />
+                <element signature="e#4794#5717#0" />
+                <element signature="e#3387#4130#0" />
+                <element signature="e#1857#2658#0" />
+                <element signature="e#5431#5629#0" />
+                <element signature="e#2619#3800#0" />
+                <element signature="e#7422#8489#0" />
+                <element signature="e#10425#11755#0" />
+                <element signature="e#11521#12832#0" />
+                <element signature="e#15788#15859#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/printM.py">
+        <entry file="file://$PROJECT_DIR$/Search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            <state relative-caret-position="125">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ver02-fileOpen2Cv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="475" column="18" lean-forward="true" selection-start-line="475" selection-start-column="18" selection-end-line="475" selection-end-column="18" />
+              <folding>
+                <element signature="e#619#788#0" />
+                <element signature="e#605#1773#0" />
+                <element signature="e#941#2071#0" />
+                <element signature="e#2101#2534#0" />
+                <element signature="e#2432#2517#0" />
+                <element signature="e#4952#5491#0" />
+                <element signature="e#6930#7826#0" />
+                <element signature="e#7410#8135#0" />
+                <element signature="e#8157#9371#0" />
+                <element signature="e#9394#10393#0" />
+                <element signature="e#10424#11873#0" />
+                <element signature="e#11315#11815#0" />
+                <element signature="e#11348#11815#0" />
+                <element signature="e#11936#13230#0" />
+                <element signature="e#14579#17686#0" />
+                <element signature="e#16102#16210#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Day13(빅데이터분석,처리-딥러닝 기반 적용).py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-114">
+              <caret line="1201" column="30" lean-forward="true" selection-start-line="1201" selection-start-column="30" selection-end-line="1201" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,6 +112,16 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>canvas</find>
+      <find>Image</find>
+      <find>import</find>
+      <find>pack</find>
+      <find>cv2</find>
+      <find>itemList</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -78,15 +130,17 @@
       <list>
         <option value="$PROJECT_DIR$/Test network printer connection.py" />
         <option value="$PROJECT_DIR$/printM.py" />
-        <option value="$PROJECT_DIR$/Search.py" />
+        <option value="$PROJECT_DIR$/../Day13(빅데이터분석,처리-딥러닝 기반 적용).py" />
         <option value="$PROJECT_DIR$/ver01-UI.py" />
+        <option value="$PROJECT_DIR$/Search.py" />
+        <option value="$PROJECT_DIR$/ver02-fileOpen2Cv.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="861" />
-    <option name="width" value="1066" />
-    <option name="height" value="1047" />
+    <option name="x" value="73" />
+    <option name="width" value="1537" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -120,8 +174,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -140,7 +194,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ver01-UI">
+  <component name="RunManager" selected="Python.ver02-fileOpen2Cv">
     <configuration name="DBConn" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -204,8 +258,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="ver02-fileOpen2Cv" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MyProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ver02-fileOpen2Cv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ver02-fileOpen2Cv" />
         <item itemvalue="Python.ver01-UI" />
         <item itemvalue="Python.DBConn" />
         <item itemvalue="Python.Test network printer connection" />
@@ -223,19 +299,27 @@
       <option name="presentableId" value="Default" />
       <updated>1558758032996</updated>
     </task>
+    <task id="LOCAL-00001" summary="myProject ver.01">
+      <created>1559089510319</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1559089510319</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="861" y="0" width="1066" height="1047" extended-state="0" />
+    <frame x="73" y="0" width="1537" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.02918288" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49447078" visible="true" weight="0.13542362" />
+      <window_info id="Structure" order="1" sideWeight="0.5055292" side_tool="true" weight="0.2809829" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2584885" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978093" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31453362" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39868566" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -247,6 +331,29 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49816176" visible="true" weight="0.13856691" />
+      <window_info id="Structure" order="1" sideWeight="0.5018382" side_tool="true" visible="true" weight="0.13856691" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4099783" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="myProject ver.01" />
+    <option name="LAST_COMMIT_MESSAGE" value="myProject ver.01" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Day10-오전 퀴즈.py">
@@ -280,13 +387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="48" column="23" lean-forward="true" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBConn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -294,12 +394,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ver01-UI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="360" column="26" selection-start-line="360" selection-start-column="26" selection-end-line="360" selection-end-column="26" />
+        <state relative-caret-position="-1848">
+          <caret line="519" column="95" lean-forward="true" selection-start-line="519" selection-start-column="95" selection-end-line="519" selection-end-column="95" />
+          <folding>
+            <element signature="e#297#609#0" />
+            <element signature="e#682#1805#0" />
+            <element signature="e#1973#2374#0" />
+            <element signature="e#2493#3221#0" />
+            <element signature="e#3254#3660#0" />
+            <element signature="e#4794#5717#0" />
+            <element signature="e#3387#4130#0" />
+            <element signature="e#1857#2658#0" />
+            <element signature="e#5431#5629#0" />
+            <element signature="e#2619#3800#0" />
+            <element signature="e#7422#8489#0" />
+            <element signature="e#10425#11755#0" />
+            <element signature="e#11521#12832#0" />
+            <element signature="e#15788#15859#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Day13(빅데이터분석,처리-딥러닝 기반 적용).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="1201" column="30" lean-forward="true" selection-start-line="1201" selection-start-column="30" selection-end-line="1201" selection-end-column="30" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Day12-01(빅데이터분석,처리-Numpy성능개선).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="778" column="7" selection-start-line="778" selection-start-column="7" selection-end-line="778" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ver02-fileOpen2Cv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="475" column="18" lean-forward="true" selection-start-line="475" selection-start-column="18" selection-end-line="475" selection-end-column="18" />
+          <folding>
+            <element signature="e#619#788#0" />
+            <element signature="e#605#1773#0" />
+            <element signature="e#941#2071#0" />
+            <element signature="e#2101#2534#0" />
+            <element signature="e#2432#2517#0" />
+            <element signature="e#4952#5491#0" />
+            <element signature="e#6930#7826#0" />
+            <element signature="e#7410#8135#0" />
+            <element signature="e#8157#9371#0" />
+            <element signature="e#9394#10393#0" />
+            <element signature="e#10424#11873#0" />
+            <element signature="e#11315#11815#0" />
+            <element signature="e#11348#11815#0" />
+            <element signature="e#11936#13230#0" />
+            <element signature="e#14579#17686#0" />
+            <element signature="e#16102#16210#0" />
           </folding>
         </state>
       </provider>

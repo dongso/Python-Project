@@ -13,7 +13,7 @@ import numpy as np
 import cv2
 
 #Global variables....
-global window, variable, fullFrame, canvas, paper
+global window, variable, fullFrame, canvas, paper, itemList
 
 canvas,paper=None, None
 
@@ -26,24 +26,62 @@ window = Tk(); window.title("스타일링 툴(ver 0.0.1")
 window.geometry("800x500")
 fullFrame=Frame(window); fullFrame.pack()
 
+itemList = ['shirts', 'pants', 'shoes', 'bag']  # 0,1,2,3,4
+
 
 ### Define Functions...
+
+def getItemidx(itemName):
+    itemList=['shirts', 'pants', 'shoes', 'bag']  # 0,1,2,3,4
+    cnt=0
+    for item in itemList:
+        if item ==itemName:
+            break
+        cnt+=1
+    return cnt
 def sear1():
-    global variable
+    global variable, fullFrame,listIDX, listCOMM,listCOLOR, itemList
 
-    category=variable.get()
-    obj = Search.Searching()
-    obj.setTable("Cloths")
+    cnt=getItemidx(variable.get())
 
-    # print(obj.getTable())
-    query = "select Cloths.mainColor, Category.cname, Cloths.comment from Cloths, Category where Category.cname='" + category + "'"
-    obj.setQuery(query)
+    con = pymssql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME, charset='utf8')
+    cur = con.cursor()
 
-    print(obj.getQuery())
+    query="select Cloths.mainColor, Cloths.comment from Cloths where categoryType in (select idx from Category where cname ='"+itemList[cnt]+"')"
+    print(query)
+    cur.execute(query)
+
+    colorList, commentList,idxList=[],[],[]
+    cnt=1
+    while True:
+        row = cur.fetchone()
+        if row == None or row == "":
+            break
+        colorList.append(row[0])
+        #cnameList.append(row[1])
+        commentList.append(row[1])
+        idxList.append(cnt)
+        cnt+=1
+
+    listIDX.delete(0, listIDX.size() - 1)
+    listCOMM.delete(0, listCOMM.size() - 1)
+    #listRECE.delete(0, listRECE.size() - 1)
+    listCOLOR.delete(0, listCOLOR.size() - 1)
+
+
+    for idx, color,  comment in zip(idxList,colorList, commentList):
+        listIDX.insert(END, idx)
+        listCOLOR.insert(END, color)
+        #listRECE.insert(END, cname)
+        listCOMM.insert(END, comment)
+
+    cur.close()
+    con.close()
+
 def menuSearch1():
     ######## MENU 1. 검색 ########
 
-    global variable, fullFrame
+    global variable, fullFrame,listIDX, listCOMM,listCOLOR
 
     if fullFrame != None :
         fullFrame.destroy()
@@ -51,7 +89,7 @@ def menuSearch1():
     fullFrame=Frame(window); fullFrame.pack()
     frame1 = Frame(fullFrame); frame1.pack()
 
-    itemList=['상의','하의','모자','신발','가방']
+    itemList = ['shirts', 'pants', 'shoes', 'bag']  # 0,1,2,3,4
 
     variable = StringVar(frame1)
     variable.set(itemList[0]) #initial value
@@ -64,15 +102,15 @@ def menuSearch1():
     ####### 검색 결과 화면 ######
     frame2 = Frame(fullFrame); frame2.pack(side=TOP, expand=1)
     idx=Label(frame2, text="번호");idx.pack(side=LEFT, padx=60)
-    comm=Label(frame2, text="설명");comm.pack(side=LEFT, padx=40)
-    rece=Label(frame2, text="최근 착용일");rece.pack(side=LEFT, padx=50)
-    image=Label(frame2, text="이미지 보기");image.pack(side=LEFT, padx=40)
+    color=Label(frame2, text="메인 컬러");color.pack(side=LEFT, padx=40)
+    cType=Label(frame2, text="형식");cType.pack(side=LEFT, padx=50)
+    comment=Label(frame2, text="설명");comment.pack(side=LEFT, padx=40)
 
     frame3 = Frame(fullFrame); frame3.pack(side=BOTTOM, expand=1)
     listIDX=Listbox(frame3); listIDX.pack(side=LEFT)
-    listCOMM=Listbox(frame3); listCOMM.pack(side=LEFT)
-    listRECE = Listbox(frame3); listRECE.pack(side=LEFT)
-    listImage= Listbox(frame3); listImage.pack(side=LEFT)
+    listCOLOR=Listbox(frame3); listCOLOR.pack(side=LEFT)
+    #listRECE = Listbox(frame3); listRECE.pack(side=LEFT)
+    listCOMM= Listbox(frame3); listCOMM.pack(side=LEFT)
 
     return
 def makeEmptyRGBList():
@@ -97,8 +135,7 @@ def makeEmptyRGBList():
         B.append(tmp)
     return R,G,B
 def loadImageColor(fname) :
-    global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename, photo
-
+    global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename, photo,text
 
     # 파일 크기 계산
     photo = Image.open(fname)
@@ -109,15 +146,18 @@ def loadImageColor(fname) :
     inImageG = np.zeros((inH, inW), dtype=np.uint8)
     inImageB = np.zeros((inH, inW), dtype=np.uint8)
 
-
     # 파일 --> 메모리로 한개씩 옮기기
+    text=""
     photoRGB = photo.convert('RGB')
     for  i  in  range(inH) :
         for k in range(inW) :
             r, g, b = photoRGB.getpixel((k, i)) #
             inImageR[i][k] = r; inImageG[i][k] = g; inImageB[i][k] = b
-
+            text+="("+str(r)+","+str(g)+","+str(b)+")"
+        #print(str(i/inH)+" 진행중 ...")
     # print(inImageR[100][100],inImageG[100][100],inImageB[100][100])
+    print("[Image loading] END...")
+
 def  openImage() :
     global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename
     filename = askopenfilename(parent=window, filetypes=(("영상 파일", "*.gif;*.jpg;*.png;*.bmp;*.tif"), ("모든 파일", "*.*")))
@@ -159,6 +199,7 @@ def displayImageColor() :
     paper.put(rgbString)
     canvas.pack(expand=1, anchor=CENTER)
     status.configure(text='이미지 정보:' + str(outW) + 'x' + str(outH))
+
 def equalImageColor() :
     global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename
 
@@ -175,20 +216,14 @@ def equalImageColor() :
             outImageB[i][k] = inImageB[i][k]
     ################################
     displayImageColor()
+
+
 def addCloths():
     global variable,fullFrame,variable,ent1,ent2, w, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename,text
-    itemList=['상의','하의','신발','가방'] #0,1,2,3,4
 
-    con = pymssql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME,
-                          charset='utf8')
+    con = pymssql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME,charset='utf8')
     cur = con.cursor()
-
-
-    cnt=0
-    for item in itemList:
-        if item==variable.get():
-            break
-        cnt+=1
+    cnt=getItemidx(variable.get())
 
 
     categoryType=str(cnt+1)
@@ -226,7 +261,7 @@ def menuAdd1():
 
     frame1 = Frame(fullFrame); frame1.pack(side=TOP)
 
-    itemList=['상의','하의','신발','가방']
+    itemList = ['shirts', 'pants', 'shoes', 'bag']  # 0,1,2,3,4
 
     variable = StringVar(frame1)
     variable.set(itemList[0]) #initial value
@@ -243,7 +278,7 @@ def menuAdd1():
     frame2 = Frame(fullFrame); frame2.pack(side=BOTTOM)
     #label1 = Label(frame2); label1.pack()
 
-    btn2 = Button(frame2, text="이미지 불러오기",command=openImage); btn2.pack(side=LEFT, padx=10)
+    btn2 = Button(frame2, text="이미지 불러오기", command=openImage); btn2.pack(side=LEFT, padx=10)
     return
 def sear2():
     global variable, fullFrame
@@ -251,7 +286,7 @@ def sear2():
                           charset='utf8')
     cur = con.cursor()
 
-    itemList=['상의','하의','신발','가방'] #0,1,2,3,4
+    itemList = ['shirts', 'pants', 'shoes', 'bag']  # 0,1,2,3,4
 
     itemIdx = 0
     for item in itemList:
@@ -290,7 +325,7 @@ def menuPrice():
     frame1 = Frame(fullFrame);
     frame1.pack()
 
-    itemList = ['상의','하의','신발','가방']
+    itemList = ['shirts', 'pants', 'shoes', 'bag']  # 0,1,2,3,4
 
     variable = StringVar(frame1)
     variable.set(itemList[0])  # initial value
@@ -400,9 +435,64 @@ def sheetDblClick(event):
     outW=inW; outH=inH
     displayImageColor()
     return
-def getImageFromDB():
+def getImageFromDB(width, height, imageInfo):
+    global inW, inH,outW, outH, outImageR, outImageG, outImageB,window,fullFrame
+    if fullFrame != None:
+        fullFrame.destroy()
+    print(imageInfo)
+    inW=outW=width; inH=outH=height
+    R,G,B=makeEmptyRGBList()
+    outImageR,outImageG,outImageB=makeEmptyRGBList()
+    idx=1
+    #cnt=0
+    for i in range(height):
+        for k in range(width):
+            text=""
+            while imageInfo[idx] != ")":
+     #           cnt+=1
+      #          if cnt ==30 : break
+                text+=imageInfo[idx]
+                idx+=1
+            idx+=2
+       #     if cnt==30 : break
+            #print(text)
+            tList=text.split(",")
+            R[i][k]=int(tList[0]); G[i][k]=int(tList[1]); B[i][k]=int(tList[2])
+      #  if cnt==30 : break
+    outImageR=R[:]; outImageG=G[:]; outImageB=B[:]
 
+    ### 고정된 화면을 준비 ###
+    VIEW_X, VIEW_Y = 512, 512
+    if VIEW_X >= outW or VIEW_Y >= outH:  # 원영상이 256이하면
+        VIEW_X = outW;
+        VIEW_Y = outH
+        step = 1
+    else:
+        if outW > outH:
+            step = outW // VIEW_X
+        else:
+            step = outH // VIEW_Y
+
+    newWindow=Tk()
+    newWindow.geometry(str(int(VIEW_X * 1.1)) + 'x' + str(int(VIEW_Y * 1.1)))
+    canvas = Canvas(newWindow, height=VIEW_Y, width=VIEW_X)
+    paper = PhotoImage(master=canvas, height=VIEW_Y, width=VIEW_X)
+    canvas.create_image((VIEW_X / 2, VIEW_Y / 2), image=paper, state='normal')
+
+    rgbString = ''  # 여기에 전체 픽셀 문자열을 저장할 계획
+    for i in np.arange(0, outH, step):
+        tmpString = ''
+        for k in np.arange(0, outW, step):
+            r, g, b = outImageR[i][k], outImageG[i][k], outImageB[i][k]
+            tmpString += ' #%02x%02x%02x' % (r, g, b)
+        rgbString += '{' + tmpString + '} '
+    paper.put(rgbString)
+    canvas.pack(expand=1, anchor=CENTER)
+    status.configure(text='이미지 정보:' + str(outW) + 'x' + str(outH))
+    newWindow.mainloop()
     return
+
+
 def menuAddStyleBook():
     ######## MENU 5. 스타일 북 ########
     global variable, fullFrame, sheet, rows, window2,inW, inH,imageInfo
@@ -419,7 +509,7 @@ def menuAddStyleBook():
 
     btn1 = Button(frame1, text="이미지 불러오기", command=sear2);
     btn1.pack(side=RIGHT)
-
+    btn2 = Button(frame1, text="스타일북에 저장하기", command=sear2);btn2.pack(side=RIGHT)
     con = pymssql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME, charset='utf8')
     cur = con.cursor()
 
@@ -451,8 +541,17 @@ def menuAddStyleBook():
 
     return
 def menuRemoveBG():
-    global filename, inH, inW
-    openImage()
+    global fullFrame, filename, inH, inW
+
+    if fullFrame != None:
+        fullFrame.destroy()
+
+    fullFrame = Frame(window);
+    fullFrame.pack()
+    filename = askopenfilename(parent=window, filetypes=(("영상 파일", "*.gif;*.jpg;*.png;*.bmp;*.tif"), ("모든 파일", "*.*")))
+    if filename == "" or filename == None:
+        return
+
     # == Parameters =======================================================================
     BLUR = 21
     CANNY_THRESH_1 = 10
@@ -505,19 +604,8 @@ def menuRemoveBG():
     masked = (mask_stack * img) + ((1 - mask_stack) * MASK_COLOR)  # Blend
     masked = (masked * 255).astype('uint8')  # Convert back to 8-bit
 
-    # # split image into channels
-    # c_red, c_green, c_blue = cv2.split(img)
-    #
-    # # merge with mask got on one of a previous steps
-    # img_a = cv2.merge((c_red, c_green, c_blue, mask.astype('float32') / 255.0))
-    #
-    #
-    #
     cv2.imshow('img',masked)  # Display
-    # #cv2.imshow('img', img_a)
-    #cv2.waitKey()
-
-    cv2.imwrite('C:/Users/B-17/Desktop/DB project/afterImages/person-masked.jpg', masked)# Save
+    #cv2.imwrite('C:/Users/B-17/Desktop/DB project/afterImages/person-masked.jpg', masked)# Save
 def menuPrint():
     ######## MENU 6. 프린트하기 ########
 
@@ -538,36 +626,25 @@ def sheetDblClick2(event):
     print(sql)
     cur.execute(sql)
     row = cur.fetchone()
-    cur.close()
-    con.close()
 
     itemList=row[0].split(",")
     imgCnt=len(itemList)
+    print(imgCnt)
+
     for item in itemList:
-        pass
+        print("item : ", item)
+        query="select width, height, imageInfo, cloth_idx from Image where cloth_idx="+item
+        #print(query)
+        cur.execute(query)
+        row=cur.fetchone()
+        getImageFromDB(row[0], row[1], row[2])
 
 
-    # imageInfo=row[0]; inW=row[1]; inH=row[2]
-    # print(imageInfo)
-    # outImageR, outImageG, outImageB = makeEmptyRGBList()
-    # inImageR, inImageG, inImageB = makeEmptyRGBList()
-    #
-    # start,cnt=0,0
-    # for i in range(inH):
-    #     for k in range(inW):
-    #         newStr=""
-    #         if imageInfo[start]=='(':
-    #             start+=1
-    #         while imageInfo[start] != ')':
-    #             newStr=newStr+imageInfo[start]
-    #             start+=1
-    #         start+=2
-    #         print(newStr)
-    #         r=int(newStr.split(",")[0]); g = int(newStr.split(",")[1]); b=int(newStr.split(",")[2])
-    #         inImageR[i][k]=r; inImageG[i][k]=g; inImageB[i][k]=b
-    #         outImageR[i][k]=r; outImageG[i][k]=g; outImageB[i][k]=b
-    # outW=inW; outH=inH
-    # displayImageColor()
+
+
+    cur.close()
+    con.close()
+
     return
 
 def menuCallStyle():
@@ -635,14 +712,14 @@ clothsMenu.add_cascade(label="가격 정보 검색", command=menuPrice)
 clothsMenu.add_cascade(label="최근 착용일 검색", command=menuRecent)
 
 ######## MENU 4. 스타일링 ########
-styleMenu = Menu(mainMenu)
-
-sMenu=Menu(styleMenu)
-
-mainMenu.add_cascade(label = "스타일링", menu=styleMenu)
-styleMenu.add_cascade(label="action", menu=sMenu, command=None)
-sMenu.add_cascade(label = "스타일링", command=None)
-sMenu.add_cascade(label = "옷 색상 바꾸기", command=None)
+# styleMenu = Menu(mainMenu)
+#
+# sMenu=Menu(styleMenu)
+#
+# mainMenu.add_cascade(label = "스타일링", menu=styleMenu)
+# styleMenu.add_cascade(label="action", menu=sMenu, command=None)
+# sMenu.add_cascade(label = "스타일링", command=None)
+# sMenu.add_cascade(label = "옷 색상 바꾸기", command=None)
 
 ######## MENU 5. 스타일 북 ########
 styleBookMenu = Menu(mainMenu)

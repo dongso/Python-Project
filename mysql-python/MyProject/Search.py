@@ -26,9 +26,9 @@ class Searching:
     def __del__(self):
         #소멸자
 
-        self.cur.close()
-        self.con.commit()
-        self.con.close()
+        # self.cur.close()
+        # self.con.commit()
+        # self.con.close()
         pass
 
     def getDBcon(self):
