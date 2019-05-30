@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e781ee12-8332-4f35-b3a2-000d1d42607d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Day13(빅데이터분석,처리-딥러닝 기반 적용).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Day13-2(빅데이터분석,처리-딥러닝 기반 적용 동영상).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ver02-fileOpen2Cv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/190530.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imageMerging.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ver02-multiImage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Search.py" beforeDir="false" afterPath="$PROJECT_DIR$/Search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ver01-UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/ver01-UI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printM.py" beforeDir="false" afterPath="$PROJECT_DIR$/printM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ver02-fileOpen2Cv.py" beforeDir="false" afterPath="$PROJECT_DIR$/ver02-fileOpen2Cv.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,35 +21,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Day12-01(빅데이터분석,처리-Numpy성능개선).py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="778" column="7" selection-start-line="778" selection-start-column="7" selection-end-line="778" selection-end-column="7" />
+            <state relative-caret-position="-458">
+              <caret line="764" lean-forward="true" selection-start-line="764" selection-end-line="764" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ver01-UI.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1848">
-              <caret line="519" column="95" lean-forward="true" selection-start-line="519" selection-start-column="95" selection-end-line="519" selection-end-column="95" />
-              <folding>
-                <element signature="e#297#609#0" />
-                <element signature="e#682#1805#0" />
-                <element signature="e#1973#2374#0" />
-                <element signature="e#2493#3221#0" />
-                <element signature="e#3254#3660#0" />
-                <element signature="e#4794#5717#0" />
-                <element signature="e#3387#4130#0" />
-                <element signature="e#1857#2658#0" />
-                <element signature="e#5431#5629#0" />
-                <element signature="e#2619#3800#0" />
-                <element signature="e#7422#8489#0" />
-                <element signature="e#10425#11755#0" />
-                <element signature="e#11521#12832#0" />
-                <element signature="e#15788#15859#0" />
               </folding>
             </state>
           </provider>
@@ -58,46 +33,79 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="480">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ver02-fileOpen2Cv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="611" lean-forward="true" selection-start-line="611" selection-end-line="611" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/printM.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ver02-fileOpen2Cv.py">
+        <entry file="file://$PROJECT_DIR$/ver02-multiImage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="475" column="18" lean-forward="true" selection-start-line="475" selection-start-column="18" selection-end-line="475" selection-end-column="18" />
+            <state relative-caret-position="719">
+              <caret line="836" column="17" lean-forward="true" selection-start-line="836" selection-start-column="17" selection-end-line="836" selection-end-column="17" />
               <folding>
-                <element signature="e#619#788#0" />
-                <element signature="e#605#1773#0" />
-                <element signature="e#941#2071#0" />
-                <element signature="e#2101#2534#0" />
-                <element signature="e#2432#2517#0" />
-                <element signature="e#4952#5491#0" />
-                <element signature="e#6930#7826#0" />
-                <element signature="e#7410#8135#0" />
-                <element signature="e#8157#9371#0" />
-                <element signature="e#9394#10393#0" />
-                <element signature="e#10424#11873#0" />
-                <element signature="e#11315#11815#0" />
-                <element signature="e#11348#11815#0" />
-                <element signature="e#11936#13230#0" />
-                <element signature="e#14579#17686#0" />
-                <element signature="e#16102#16210#0" />
+                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#690#859#0" />
+                <element signature="e#877#2025#0" />
+                <element signature="e#2050#3236#0" />
+                <element signature="e#3266#3699#0" />
+                <element signature="e#6262#6801#0" />
+                <element signature="e#6825#7681#0" />
+                <element signature="e#7702#8592#0" />
+                <element signature="e#8610#9353#0" />
+                <element signature="e#9375#10616#0" />
+                <element signature="e#11669#13118#0" />
+                <element signature="e#13169#15050#0" />
+                <element signature="e#16481#19296#0" />
+                <element signature="e#19318#19426#0" />
+                <element signature="e#19481#22799#0" />
+                <element signature="e#20469#21434#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Day13(빅데이터분석,처리-딥러닝 기반 적용).py">
+        <entry file="file://$PROJECT_DIR$/imageMerging.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-114">
-              <caret line="1201" column="30" lean-forward="true" selection-start-line="1201" selection-start-column="30" selection-end-line="1201" selection-end-column="30" />
+            <state relative-caret-position="253">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/190530.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="902">
+              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+              <folding>
+                <element signature="e#1087#1108#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,6 +128,11 @@
       <find>pack</find>
       <find>cv2</find>
       <find>itemList</find>
+      <find>tree</find>
+      <find>ask</find>
+      <find>askopen</find>
+      <find>askopenfilename</find>
+      <find>cv2.imread</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,17 +142,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Test network printer connection.py" />
-        <option value="$PROJECT_DIR$/printM.py" />
         <option value="$PROJECT_DIR$/../Day13(빅데이터분석,처리-딥러닝 기반 적용).py" />
         <option value="$PROJECT_DIR$/ver01-UI.py" />
         <option value="$PROJECT_DIR$/Search.py" />
+        <option value="$PROJECT_DIR$/190530.py" />
+        <option value="$PROJECT_DIR$/ver02-multiImage.py" />
+        <option value="$PROJECT_DIR$/printM.py" />
         <option value="$PROJECT_DIR$/ver02-fileOpen2Cv.py" />
+        <option value="$PROJECT_DIR$/imageMerging.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="73" />
-    <option name="width" value="1537" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="596" />
+    <option name="y" value="-8" />
+    <option name="width" value="1250" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -148,17 +165,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="MyProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\ds\Python-Project\mysql-python\MyProject" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -170,11 +176,22 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="MyProject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\ds\Python-Project\mysql-python\MyProject" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -194,8 +211,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ver02-fileOpen2Cv">
-    <configuration name="DBConn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.ver02-multiImage">
+    <configuration name="Day12-01(빅데이터분석,처리-Numpy성능개선)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -203,11 +220,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DBConn.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Day12-01(빅데이터분석,처리-Numpy성능개선).py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -216,7 +233,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Test network printer connection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="imageMerging" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -228,7 +245,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test network printer connection.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/imageMerging.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -237,7 +254,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ver01-UI" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lunchApp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -245,11 +262,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ver01-UI.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/lunchApp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -279,14 +296,39 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="ver02-multiImage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MyProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ver02-multiImage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ver02-multiImage" />
+        <item itemvalue="Python.imageMerging" />
         <item itemvalue="Python.ver02-fileOpen2Cv" />
-        <item itemvalue="Python.ver01-UI" />
-        <item itemvalue="Python.DBConn" />
-        <item itemvalue="Python.Test network printer connection" />
+        <item itemvalue="Python.lunchApp" />
+        <item itemvalue="Python.Day12-01(빅데이터분석,처리-Numpy성능개선)" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -306,27 +348,43 @@
       <option name="project" value="LOCAL" />
       <updated>1559089510319</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="myProject ver.02">
+      <created>1559133006119</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1559133006119</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="0" width="1537" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49447078" visible="true" weight="0.13542362" />
-      <window_info id="Structure" order="1" sideWeight="0.5055292" side_tool="true" weight="0.2809829" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4934924" visible="true" weight="0.15595363" />
+      <window_info id="Structure" order="1" sideWeight="0.5065076" side_tool="true" visible="true" weight="0.15595363" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31453362" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39868566" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.324295" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39804772" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -353,7 +411,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="myProject ver.01" />
-    <option name="LAST_COMMIT_MESSAGE" value="myProject ver.01" />
+    <MESSAGE value="myProject ver.02" />
+    <option name="LAST_COMMIT_MESSAGE" value="myProject ver.02" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Day10-오전 퀴즈.py">
@@ -380,13 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/printM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBConn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -396,37 +448,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ver01-UI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1848">
-          <caret line="519" column="95" lean-forward="true" selection-start-line="519" selection-start-column="95" selection-end-line="519" selection-end-column="95" />
-          <folding>
-            <element signature="e#297#609#0" />
-            <element signature="e#682#1805#0" />
-            <element signature="e#1973#2374#0" />
-            <element signature="e#2493#3221#0" />
-            <element signature="e#3254#3660#0" />
-            <element signature="e#4794#5717#0" />
-            <element signature="e#3387#4130#0" />
-            <element signature="e#1857#2658#0" />
-            <element signature="e#5431#5629#0" />
-            <element signature="e#2619#3800#0" />
-            <element signature="e#7422#8489#0" />
-            <element signature="e#10425#11755#0" />
-            <element signature="e#11521#12832#0" />
-            <element signature="e#15788#15859#0" />
-          </folding>
+        <state relative-caret-position="480">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Day13(빅데이터분석,처리-딥러닝 기반 적용).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
+        <state relative-caret-position="23960">
           <caret line="1201" column="30" lean-forward="true" selection-start-line="1201" selection-start-column="30" selection-end-line="1201" selection-end-column="30" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -434,37 +463,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ver01-UI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="953">
+          <caret line="519" column="95" selection-start-line="519" selection-start-column="95" selection-end-line="519" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../Day12-01(빅데이터분석,처리-Numpy성능개선).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="778" column="7" selection-start-line="778" selection-start-column="7" selection-end-line="778" selection-end-column="7" />
+        <state relative-caret-position="-458">
+          <caret line="764" lean-forward="true" selection-start-line="764" selection-end-line="764" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/190530.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="e#1087#1108#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/lunchApp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ver02-fileOpen2Cv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="475" column="18" lean-forward="true" selection-start-line="475" selection-start-column="18" selection-end-line="475" selection-end-column="18" />
+        <state relative-caret-position="240">
+          <caret line="611" lean-forward="true" selection-start-line="611" selection-end-line="611" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imageMerging.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
-            <element signature="e#619#788#0" />
-            <element signature="e#605#1773#0" />
-            <element signature="e#941#2071#0" />
-            <element signature="e#2101#2534#0" />
-            <element signature="e#2432#2517#0" />
-            <element signature="e#4952#5491#0" />
-            <element signature="e#6930#7826#0" />
-            <element signature="e#7410#8135#0" />
-            <element signature="e#8157#9371#0" />
-            <element signature="e#9394#10393#0" />
-            <element signature="e#10424#11873#0" />
-            <element signature="e#11315#11815#0" />
-            <element signature="e#11348#11815#0" />
-            <element signature="e#11936#13230#0" />
-            <element signature="e#14579#17686#0" />
-            <element signature="e#16102#16210#0" />
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ver02-multiImage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="719">
+          <caret line="836" column="17" lean-forward="true" selection-start-line="836" selection-start-column="17" selection-end-line="836" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#690#859#0" />
+            <element signature="e#877#2025#0" />
+            <element signature="e#2050#3236#0" />
+            <element signature="e#3266#3699#0" />
+            <element signature="e#6262#6801#0" />
+            <element signature="e#6825#7681#0" />
+            <element signature="e#7702#8592#0" />
+            <element signature="e#8610#9353#0" />
+            <element signature="e#9375#10616#0" />
+            <element signature="e#11669#13118#0" />
+            <element signature="e#13169#15050#0" />
+            <element signature="e#16481#19296#0" />
+            <element signature="e#19318#19426#0" />
+            <element signature="e#19481#22799#0" />
+            <element signature="e#20469#21434#0" />
           </folding>
         </state>
       </provider>

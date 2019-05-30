@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter.filedialog import askopenfilename
+from tkinter.simpledialog import askinteger
 
 import matplotlib as plt
 import pymssql
@@ -12,21 +13,9 @@ from PIL import Image
 import numpy as np
 import cv2
 
+
 #Global variables....
 global window, variable, fullFrame, canvas, paper, itemList
-
-canvas,paper=None, None
-
-IP_ADDR = '192.168.111.130'
-DB_NAME = 'khyProject'
-USER_NAME = 'root'
-USER_PASS = '1234'
-
-window = Tk(); window.title("스타일링 툴(ver 0.0.1")
-window.geometry("800x500")
-fullFrame=Frame(window); fullFrame.pack()
-
-itemList = ['shirts', 'pants', 'shoes', 'bag']  # 0,1,2,3,4
 
 
 ### Define Functions...
@@ -77,7 +66,6 @@ def sear1():
 
     cur.close()
     con.close()
-
 def menuSearch1():
     ######## MENU 1. 검색 ########
 
@@ -157,7 +145,6 @@ def loadImageColor(fname) :
         #print(str(i/inH)+" 진행중 ...")
     # print(inImageR[100][100],inImageG[100][100],inImageB[100][100])
     print("[Image loading] END...")
-
 def  openImage() :
     global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename
     filename = askopenfilename(parent=window, filetypes=(("영상 파일", "*.gif;*.jpg;*.png;*.bmp;*.tif"), ("모든 파일", "*.*")))
@@ -169,9 +156,10 @@ def  openImage() :
     # Input --> outPut으로 동일하게 만들기.
     equalImageColor()
 def displayImageColor() :
-    global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename
-    if canvas != None :
-        canvas.destroy()
+    global fullFrame,window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename
+    if fullFrame != None :
+        fullFrame.destroy()
+
 
     ### 고정된 화면을 준비 ###
     VIEW_X, VIEW_Y = 512,512
@@ -185,8 +173,8 @@ def displayImageColor() :
             step = outH // VIEW_Y
 
     window.geometry(str(int(VIEW_X*1.1)) + 'x' + str(int(VIEW_Y*1.1)))
-    canvas = Canvas(window, height=VIEW_Y, width=VIEW_X)
-    paper = PhotoImage(height=VIEW_Y, width=VIEW_X)
+    canvas = Canvas(master=fullFrame, height=VIEW_Y, width=VIEW_X)
+    paper = PhotoImage(master=canvas, height=VIEW_Y, width=VIEW_X)
     canvas.create_image((VIEW_X / 2, VIEW_Y / 2), image=paper, state='normal')
 
     rgbString = '' # 여기에 전체 픽셀 문자열을 저장할 계획
@@ -199,7 +187,6 @@ def displayImageColor() :
     paper.put(rgbString)
     canvas.pack(expand=1, anchor=CENTER)
     status.configure(text='이미지 정보:' + str(outW) + 'x' + str(outH))
-
 def equalImageColor() :
     global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename
 
@@ -216,8 +203,6 @@ def equalImageColor() :
             outImageB[i][k] = inImageB[i][k]
     ################################
     displayImageColor()
-
-
 def addCloths():
     global variable,fullFrame,variable,ent1,ent2, w, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename,text
 
@@ -439,7 +424,7 @@ def getImageFromDB(width, height, imageInfo):
     global inW, inH,outW, outH, outImageR, outImageG, outImageB,window,fullFrame
     if fullFrame != None:
         fullFrame.destroy()
-    print(imageInfo)
+    #print(imageInfo)
     inW=outW=width; inH=outH=height
     R,G,B=makeEmptyRGBList()
     outImageR,outImageG,outImageB=makeEmptyRGBList()
@@ -473,7 +458,7 @@ def getImageFromDB(width, height, imageInfo):
         else:
             step = outH // VIEW_Y
 
-    newWindow=Tk()
+    newWindow=Tk(); newWindow.title("Images")
     newWindow.geometry(str(int(VIEW_X * 1.1)) + 'x' + str(int(VIEW_Y * 1.1)))
     canvas = Canvas(newWindow, height=VIEW_Y, width=VIEW_X)
     paper = PhotoImage(master=canvas, height=VIEW_Y, width=VIEW_X)
@@ -491,8 +476,33 @@ def getImageFromDB(width, height, imageInfo):
     status.configure(text='이미지 정보:' + str(outW) + 'x' + str(outH))
     newWindow.mainloop()
     return
+def addYellowImageColor() :
+    global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename
+    outImageR = np.zeros((inH, inW), dtype=np.uint8)
+    outImageG = np.zeros((inH, inW), dtype=np.uint8)
+    outImageB = np.zeros((inH, inW), dtype=np.uint8)
 
+    #outIMage의 크기를 결정
+    outH = inH; outW = inW
+    # 빈 메모리 확보 (2차원 리스트)
 
+    value = askinteger("밝게할 값", "값 입력")
+    #### 영상 처리 알고리즘을 구현 ####
+    for i in range(inH) :
+        for k in range(inW) :
+            outImageB[i][k]=inImageB[i][k]
+
+            if inImageG[i][k] + value > 255 :
+                outImageG[i][k] = 255
+            else :
+                outImageG[i][k] = inImageG[i][k] + value
+
+            if inImageR[i][k] + value > 255 :
+                  outImageR[i][k] = 255
+            else :
+                outImageR[i][k] = inImageR[i][k] + value
+
+    displayImageColor()
 def menuAddStyleBook():
     ######## MENU 5. 스타일 북 ########
     global variable, fullFrame, sheet, rows, window2,inW, inH,imageInfo
@@ -505,36 +515,35 @@ def menuAddStyleBook():
 
     label1= Label(frame1, text="<< 필터 적용 후 스타일북에 저장하기>> "); label1.pack(side=TOP)
 
+    btn1 = Button(frame1, text="이미지 불러오기", command=openImage); btn1.pack(side=RIGHT)
+    btn2 = Button(frame1, text="필터 적용하기", command=addYellowImageColor);btn2.pack(side=RIGHT)
 
 
-    btn1 = Button(frame1, text="이미지 불러오기", command=sear2);
-    btn1.pack(side=RIGHT)
-    btn2 = Button(frame1, text="스타일북에 저장하기", command=sear2);btn2.pack(side=RIGHT)
-    con = pymssql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME, charset='utf8')
-    cur = con.cursor()
-
-
-    query="select idx,mainColor, categoryType, comment from Cloths"
-    cur.execute(query)
-    rows=cur.fetchall()
-
-    ## 새로운 윈도창 띄우기
-    window2 = Toplevel(window); window2.geometry("600x600")
-    sheet = ttk.Treeview(window2);sheet.pack(expand=1)
-    descs = cur.description
-    colNames = [d[0] for d in descs]
-    sheet.column("#0", width=80);
-    sheet.heading("#0", text=colNames[0])
-    sheet["columns"] = colNames[1:]
-    for colName in colNames[1:]:
-        sheet.column(colName, width=200);
-        sheet.heading(colName, text=colName)
-    for row in rows:
-        sheet.insert('', 'end', text=row[0], values=row[1:])
-    sheet.bind('<Double-1>', sheetDblClick)
-
-    cur.close()
-    con.close()
+    # con = pymssql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME, charset='utf8')
+    # cur = con.cursor()
+    #
+    #
+    # query="select idx,mainColor, categoryType, comment from Cloths"
+    # cur.execute(query)
+    # rows=cur.fetchall()
+    #
+    # ## 새로운 윈도창 띄우기
+    # window2 = Toplevel(window); window2.geometry("600x600")
+    # sheet = ttk.Treeview(window2);sheet.pack(expand=1)
+    # descs = cur.description
+    # colNames = [d[0] for d in descs]
+    # sheet.column("#0", width=80);
+    # sheet.heading("#0", text=colNames[0])
+    # sheet["columns"] = colNames[1:]
+    # for colName in colNames[1:]:
+    #     sheet.column(colName, width=200);
+    #     sheet.heading(colName, text=colName)
+    # for row in rows:
+    #     sheet.insert('', 'end', text=row[0], values=row[1:])
+    # sheet.bind('<Double-1>', sheetDblClick)
+    #
+    # cur.close()
+    # con.close()
 
 
 
@@ -605,16 +614,15 @@ def menuRemoveBG():
     masked = (masked * 255).astype('uint8')  # Convert back to 8-bit
 
     cv2.imshow('img',masked)  # Display
-    cv2.imwrite('C:/Users/B-17/Desktop/DB project/afterImages/person-masked.jpg', masked)# Save
+    #cv2.imwrite('C:/Users/B-17/Desktop/DB project/afterImages/person-masked.jpg', masked)# Save
 def menuPrint():
     ######## MENU 6. 프린트하기 ########
 
-
-    printM.printFile()
-
-
+    global filename, inH, inW
+    printM.printFile(filename) #현재 이미지를 출력한다.
 def sheetDblClick2(event):
     global variable, fullFrame, sheet, rows, window2, inW, inH,outW, outH,imageInfo,inImageR, inImageG, inImageB, outImageR, outImageG, outImageB
+    global canvas, paper
 
     item = sheet.identify('item', event.x, event.y)  # 'I001' ....
     entNum = int(item[1:]) - 1  ## 쿼리한 결과 리스트의 순번
@@ -639,18 +647,74 @@ def sheetDblClick2(event):
         #print(query)
         cur.execute(query)
         row=cur.fetchone()
-        getImageFromDB(row[0], row[1], row[2])
 
+        ##################################################################################################################33
+        imageInfo=row[2]
+        inW = outW = row[0]; inH = outH = row[1]
+        R, G, B = makeEmptyRGBList()
+        outImageR, outImageG, outImageB = makeEmptyRGBList()
+        idx = 1
+        # cnt=0
+        for i in range(row[1]):
+            for k in range(row[0]):
+                text = ""
+                while imageInfo[idx] != ")":
+                    #           cnt+=1
+                    #          if cnt ==30 : break
+                    text += imageInfo[idx]
+                    idx += 1
+                idx += 2
+                #     if cnt==30 : break
+                # print(text)
+                tList = text.split(",")
+                R[i][k] = int(tList[0]);
+                G[i][k] = int(tList[1]);
+                B[i][k] = int(tList[2])
+        #  if cnt==30 : break
+        outImageR = R[:];
+        outImageG = G[:];
+        outImageB = B[:]
 
+        ### 고정된 화면을 준비 ###
+        VIEW_X, VIEW_Y = 512, 512
+        if VIEW_X >= outW or VIEW_Y >= outH:  # 원영상이 256이하면
+            VIEW_X = outW;
+            VIEW_Y = outH
+            step = 1
+        else:
+            if outW > outH:
+                step = outW // VIEW_X
+            else:
+                step = outH // VIEW_Y
 
+        newWindow = Tk();
+        newWindow.title("Images")
+        newWindow.geometry(str(int(VIEW_X * 1.1)) + 'x' + str(int(VIEW_Y * 1.1)))
+        canvas = Canvas(newWindow, height=VIEW_Y, width=VIEW_X)
+        paper = PhotoImage(master=canvas, height=VIEW_Y, width=VIEW_X)
+        canvas.create_image((VIEW_X / 2, VIEW_Y / 2), image=paper, state='normal')
+
+        rgbString = ''  # 여기에 전체 픽셀 문자열을 저장할 계획
+        for i in np.arange(0, outH, step):
+            tmpString = ''
+            for k in np.arange(0, outW, step):
+                r, g, b = outImageR[i][k], outImageG[i][k], outImageB[i][k]
+                tmpString += ' #%02x%02x%02x' % (r, g, b)
+            rgbString += '{' + tmpString + '} '
+        paper.put(rgbString)
+        canvas.pack(expand=1, anchor=CENTER)
+        status.configure(text='이미지 정보:' + str(outW) + 'x' + str(outH))
+        newWindow.mainloop()
+
+        ###################################################################################################################
+       # getImageFromDB(row[0], row[1], row[2])
 
     cur.close()
     con.close()
 
     return
-
 def menuCallStyle():
-    global variable, fullFrame, sheet, rows, window2
+    global variable, fullFrame, sheet, rows, window2,canvas, paper
 
     if fullFrame != None:
         fullFrame.destroy()
@@ -683,7 +747,29 @@ def menuCallStyle():
         sheet.insert('', 'end', text=row[0], values=row[1:])
     sheet.bind('<Double-1>', sheetDblClick2)
 
+
+    canvas=[0,0,0,0]
+    paper=[0,0,0,0]
+
+
+
+
     return
+
+
+canvas,paper=None, None
+
+IP_ADDR = '192.168.111.130'
+DB_NAME = 'khyProject'
+USER_NAME = 'root'
+USER_PASS = '1234'
+
+window = Tk(); window.title("모의 스타일링 툴(ver 0.1)")
+window.geometry("800x500")
+fullFrame=Frame(window); fullFrame.pack()
+
+itemList = ['shirts', 'pants', 'shoes', 'bag']  # 0,1,2,3,4
+
 
 
 ######## Main Menu   ########
@@ -703,7 +789,6 @@ searchMenu.add_cascade(label="옷장 검색", command=menuSearch1)
 ######## MENU 2. 추가 ########
 addMenu = Menu(mainMenu)
 mainMenu.add_cascade(label = "추가", menu=addMenu)
-
 addMenu.add_cascade(label="옷 추가하기", command=menuAdd1)
 
 ######## MENU 3. 옷 정보 검색 ########

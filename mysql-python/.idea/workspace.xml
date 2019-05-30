@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49bfaa75-8c00-4dcb-a179-bf77c20c62e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Day13(빅데이터분석,처리-딥러닝 기반 적용).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day13-2(빅데이터분석,처리-딥러닝 기반 적용 동영상).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyProject/ver02-fileOpen2Cv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyProject/190530.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyProject/imageMerging.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyProject/ver02-multiImage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyProject/Search.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyProject/Search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyProject/ver01-UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyProject/ver01-UI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyProject/printM.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyProject/printM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyProject/ver02-fileOpen2Cv.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyProject/ver02-fileOpen2Cv.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,34 +22,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day04-01(practice GUI).py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Day06-02(MySQL 대용량 연동).py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1760">
-              <caret line="88" column="64" selection-start-line="88" selection-start-column="64" selection-end-line="88" selection-end-column="64" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day10-오전 퀴즈.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15440">
-              <caret line="772" column="70" selection-start-line="772" selection-start-column="70" selection-end-line="772" selection-end-column="70" />
+            <state relative-caret-position="359">
+              <caret line="1077" column="25" selection-start-line="1077" selection-start-column="25" selection-end-line="1077" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Day10-02(빅데이터 분석, 처리-OpenCV통합1).py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="172" column="19" selection-start-line="172" selection-start-column="15" selection-end-line="172" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day10-02(통합툴OpenCV1).py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1260">
+              <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -78,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Desktop/lunchApp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
+            <state relative-caret-position="20">
               <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -90,17 +90,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day13-2(빅데이터분석,처리-딥러닝 기반 적용 동영상).py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
+            <state relative-caret-position="30260">
               <caret line="1516" column="10" selection-start-line="1516" selection-start-column="10" selection-end-line="1516" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Practice/190517(종합문제).py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="537" lean-forward="true" selection-start-line="537" selection-end-line="537" />
+            <state relative-caret-position="10360">
+              <caret line="522" column="17" lean-forward="true" selection-start-line="522" selection-start-column="17" selection-end-line="522" selection-end-column="17" />
               <folding>
                 <element signature="e#1#15#0" expanded="true" />
               </folding>
@@ -111,7 +111,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Day07-mission.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6000">
+            <state relative-caret-position="5900">
               <caret line="300" column="26" selection-start-line="300" selection-start-column="26" selection-end-line="300" selection-end-column="26" />
               <folding>
                 <element signature="e#297#329#0" expanded="true" />
@@ -153,6 +153,9 @@
       <find>Image</find>
       <find>import</find>
       <find>Tree</find>
+      <find>rotat</find>
+      <find>rotate</find>
+      <find>temp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -206,8 +209,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="73" />
-    <option name="width" value="1537" />
+    <option name="x" value="596" />
+    <option name="y" value="-8" />
+    <option name="width" value="1250" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -262,7 +266,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.lunchApp">
+  <component name="RunManager" selected="Python.Day10-오전 퀴즈">
     <configuration name="Day10-오전 퀴즈" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mysql-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -370,9 +374,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Day10-오전 퀴즈" />
         <item itemvalue="Python.lunchApp" />
         <item itemvalue="Python.Day13(빅데이터분석,처리-딥러닝 기반 적용)" />
-        <item itemvalue="Python.Day10-오전 퀴즈" />
         <item itemvalue="Python.Day12-01(빅데이터분석,처리-Numpy성능개선)" />
         <item itemvalue="Python.ver01-UI" />
       </list>
@@ -441,19 +445,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559089493180</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="day 13">
+      <created>1559133025916</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1559133025916</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" x="236" y="379" width="393" height="401" id="Project" order="0" sideWeight="0.44685465" visible="true" weight="0.20864068" />
-      <window_info id="Structure" order="1" sideWeight="0.55314535" side_tool="true" visible="true" weight="0.20864068" />
+      <window_info active="true" content_ui="combo" x="236" y="379" width="393" height="401" id="Project" order="0" sideWeight="0.44468546" visible="true" weight="0.21601686" />
+      <window_info id="Structure" order="1" sideWeight="0.55531454" side_tool="true" visible="true" weight="0.21601686" />
       <window_info id="Favorites" order="2" sideWeight="0.5021692" side_tool="true" weight="0.13224447" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" weight="0.30777657" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" weight="0.30694142" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -473,7 +483,8 @@
     <MESSAGE value="Day 08 mission" />
     <MESSAGE value="Day 09" />
     <MESSAGE value="Day 10~11" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 10~11" />
+    <MESSAGE value="day 13" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 13" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Practice/190516-Practice.py">
@@ -674,51 +685,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day10-01(OpenCV1).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="41" column="35" lean-forward="true" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Day10-마지막.py" />
-    <entry file="file://$PROJECT_DIR$/Day10-02(빅데이터 분석, 처리-OpenCV통합1).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day10-02(통합툴OpenCV1).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11020">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Day08-04(빅데이터 분석, 처리 통합툴3).py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="658">
           <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Day10-LAST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="35" selection-start-line="35" selection-end-line="39" selection-end-column="18" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -810,7 +781,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Day04-01(practice GUI).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
+        <state relative-caret-position="340">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -820,7 +791,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Day06-02(MySQL 대용량 연동).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1760">
+        <state relative-caret-position="1660">
           <caret line="88" column="64" selection-start-line="88" selection-start-column="64" selection-end-line="88" selection-end-column="64" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -828,10 +799,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day10-오전 퀴즈.py">
+    <entry file="file://$PROJECT_DIR$/Day10-LAST.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15440">
-          <caret line="772" column="70" selection-start-line="772" selection-start-column="70" selection-end-line="772" selection-end-column="70" />
+        <state relative-caret-position="24980">
+          <caret line="1267" column="9" selection-start-line="1267" selection-start-column="4" selection-end-line="1267" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day10-02(통합툴OpenCV1).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -852,9 +833,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/lunchApp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day13-2(빅데이터분석,처리-딥러닝 기반 적용 동영상).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30260">
+          <caret line="1516" column="10" selection-start-line="1516" selection-start-column="10" selection-end-line="1516" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/190517(종합문제).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10360">
+          <caret line="522" column="17" lean-forward="true" selection-start-line="522" selection-start-column="17" selection-end-line="522" selection-end-column="17" />
+          <folding>
+            <element signature="e#1#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Day07-mission.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6000">
+        <state relative-caret-position="5900">
           <caret line="300" column="26" selection-start-line="300" selection-start-column="26" selection-end-line="300" selection-end-column="26" />
           <folding>
             <element signature="e#297#329#0" expanded="true" />
@@ -869,29 +877,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/lunchApp.py">
+    <entry file="file://$PROJECT_DIR$/Day10-01(OpenCV1).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="312">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="7" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Day13-2(빅데이터분석,처리-딥러닝 기반 적용 동영상).py">
+    <entry file="file://$PROJECT_DIR$/Day10-오전 퀴즈.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="1516" column="10" selection-start-line="1516" selection-start-column="10" selection-end-line="1516" selection-end-column="10" />
+        <state relative-caret-position="359">
+          <caret line="1077" column="25" selection-start-line="1077" selection-start-column="25" selection-end-line="1077" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/190517(종합문제).py">
+    <entry file="file://$PROJECT_DIR$/Day10-02(빅데이터 분석, 처리-OpenCV통합1).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="537" lean-forward="true" selection-start-line="537" selection-end-line="537" />
+        <state relative-caret-position="459">
+          <caret line="172" column="19" selection-start-line="172" selection-start-column="15" selection-end-line="172" selection-end-column="19" />
           <folding>
-            <element signature="e#1#15#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
