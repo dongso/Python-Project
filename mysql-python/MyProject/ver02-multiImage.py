@@ -3,7 +3,7 @@ from tkinter.filedialog import askopenfilename
 from tkinter.simpledialog import askinteger
 
 import matplotlib as plt
-import pymssql
+import pymysql
 import DBConn
 import printM
 import Search
@@ -33,7 +33,7 @@ def sear1():
 
     cnt=getItemidx(variable.get())
 
-    con = pymssql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME, charset='utf8')
+    con = pymysql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME, charset='utf8')
     cur = con.cursor()
 
     query="select Cloths.mainColor, Cloths.comment from Cloths where categoryType in (select idx from Category where cname ='"+itemList[cnt]+"')"
@@ -187,6 +187,7 @@ def displayImageColor() :
     paper.put(rgbString)
     canvas.pack(expand=1, anchor=CENTER)
     status.configure(text='이미지 정보:' + str(outW) + 'x' + str(outH))
+
 def equalImageColor() :
     global window, canvas, paper, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename
 
@@ -203,10 +204,11 @@ def equalImageColor() :
             outImageB[i][k] = inImageB[i][k]
     ################################
     displayImageColor()
+
 def addCloths():
     global variable,fullFrame,variable,ent1,ent2, w, inW, inH, outW, outH, inImageR, inImageG, inImageB, outImageR, outImageG, outImageB, filename,text
 
-    con = pymssql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME,charset='utf8')
+    con = pymysql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME,charset='utf8')
     cur = con.cursor()
     cnt=getItemidx(variable.get())
 
@@ -267,7 +269,7 @@ def menuAdd1():
     return
 def sear2():
     global variable, fullFrame
-    con = pymssql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME,
+    con = pymysql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME,
                           charset='utf8')
     cur = con.cursor()
 
@@ -352,7 +354,7 @@ def menuRecent():
     fullFrame = Frame(window);
     fullFrame.pack()
 
-    con = pymssql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME,charset='utf8')
+    con = pymysql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME,charset='utf8')
     cur = con.cursor()
 
     query="select items from Wearing order by wearDate Desc"
@@ -387,7 +389,7 @@ def sheetDblClick(event):
     id = rows[entNum][0]  ## 선택한 id
     window2.destroy()
     # DB에서 이미지를 다운로드
-    con = pymssql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME,charset='utf8')
+    con = pymysql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME,charset='utf8')
     cur = con.cursor()
 
     sql = "SELECT imageInfo, width, height from Image where cloth_idx=" + str(id)  # ID로 이미지 추출하기
@@ -629,7 +631,7 @@ def sheetDblClick2(event):
     id = rows[entNum][0]  ## 선택한 id
     window2.destroy()
     # DB에서 이미지를 다운로드
-    con = pymssql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME,charset='utf8')
+    con = pymysql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME,charset='utf8')
     cur = con.cursor()
 
     sql= "select items from Wearing where idx="+str(id)
@@ -722,7 +724,7 @@ def menuCallStyle():
     fullFrame = Frame(window);
     fullFrame.pack()
 
-    con = pymssql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME, charset='utf8')
+    con = pymysql.connect(host=IP_ADDR, user=USER_NAME, password=USER_PASS, database=DB_NAME, charset='utf8')
     cur = con.cursor()
 
     query = "select idx, wearDate from Wearing order by wearDate Desc"
@@ -759,10 +761,10 @@ def menuCallStyle():
 
 canvas,paper=None, None
 
-IP_ADDR = '192.168.111.130'
-DB_NAME = 'khyProject'
+IP_ADDR = 'localhost'
+DB_NAME = 'dbProject'
 USER_NAME = 'root'
-USER_PASS = '1234'
+USER_PASS = 'root'
 
 window = Tk(); window.title("모의 스타일링 툴(ver 0.1)")
 window.geometry("800x500")
